@@ -20,13 +20,14 @@ def SPop(stack):
             stack.append(0)
     return stack.pop()
 import linecache
-import os
+import os,sys
 linecache.clearcache()
-A = os.getcwd()
-print('Choose a Triple Threat program file in: ' + A)
-CODE = input("File name: ")
-CODE = A+"/"+CODE
-print(CODE)
+#A = os.getcwd()
+#print('Choose a Triple Threat program file in: ' + A)
+#CODE = input("File name: ")
+#CODE = A+"/"+CODE
+#print(CODE)
+CODE = sys.argv[1]
 LINE=1
 while 1 == 1:
     TMPCMD = linecache.getline(CODE, LINE)
@@ -107,4 +108,4 @@ while 1 == 1:
     else:
         CHAR=0
         LINE = LINE + 1
-print('End of program.')
+#print('End of program.')
